@@ -10,11 +10,11 @@ feature "User can sign in" do
 # *A user must provide email and password on sign in.
 
   it 'signs in' do
-    user = User.create!(email:'bob@gmail.com', password:'hi', password_confirmation: 'hi' )
-    visit new_sessions_path
-    fill_in 'email', with: user.email
-    fill_in 'password', with: user.password
-    click_on 'Sign In'
-    expect(page).to have_content 'Welcome'
+    user = User.create!(email:'bob@gmail.com', password:'hahahaha', password_confirmation: 'hahahaha', username: 'username')
+    visit new_user_session_path
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_on 'Sign in'
+    expect(page).to have_content 'Signed in successfully'
   end
 end
