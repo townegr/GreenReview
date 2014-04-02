@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe 'Validations' do
+    it { should have_valid(:username).when('leprechaun') }
+    it { should_not have_valid(:username).when(nil, '') }
+  end
 end
