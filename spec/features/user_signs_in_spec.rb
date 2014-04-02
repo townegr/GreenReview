@@ -10,7 +10,7 @@ feature "User can sign in" do
 # *A user must provide email and password on sign in.
 
   it 'signs in' do
-    user = User.create!(email:'bob@gmail.com', password:'hahahaha', password_confirmation: 'hahahaha', username: 'username')
+    user = FactoryGirl.create(:user)
     visit new_user_session_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
