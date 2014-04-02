@@ -58,3 +58,5 @@ group :test, :development do
   gem 'quiet_assets'
   gem 'capybara'
 end
+
+gem 'devise'
