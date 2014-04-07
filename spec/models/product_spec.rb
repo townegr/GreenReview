@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Product do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_valid(:title).when('Green Machine') }
+  it { should_not have_valid(:title).when(nil, '') }
+
+  it { should have_valid(:description).when('Very green, very machine') }
+  it { should_not have_valid(:description).when(nil, '') }
 end
