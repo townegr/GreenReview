@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
 
-  has_many :products
   has_many :reviews
+  has_many :products, dependent: :nullify
 end
