@@ -27,7 +27,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'devise'
+
 gem 'carrierwave'
+gem 'fog', "~> 1.3.1"
+gem 'mini_magick'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -52,6 +56,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'launchy'
@@ -60,5 +65,3 @@ group :test, :development do
   gem 'quiet_assets'
   gem 'capybara'
 end
-
-gem 'devise'

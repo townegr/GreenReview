@@ -2,5 +2,6 @@
 <%= simple_form_for @product do |f| %>
   <%= f.input :title, label: 'Title' %>
   <%= f.input :description, label: 'Description' %>
+  <%= f.file_field :image, label: 'Upload Product Image' %>
   <%= f.button :submit, "Add Product" %>
 <% end %>

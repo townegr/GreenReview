@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user_id = current_user.id
     if @product.save
       redirect_to products_path
       flash[:notice] = "Successfully added product"
@@ -14,9 +15,10 @@ class ProductsController < ApplicationController
   end
 
   def index
+    @products = Product.all
   end
 
   def product_params
-    params.require(:product).permit(:title, :description)
+    params.require(:product).permit(:title, :description, :image, :user_id)
   end
 end
