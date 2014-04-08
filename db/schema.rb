@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20140407191705) do
   create_table "products", force: true do |t|
     t.string   "title",       null: false
     t.text     "description", null: false
-    t.integer  "user_id",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "reviews", force: true do |t|

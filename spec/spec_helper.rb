@@ -40,4 +40,6 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   config.include AuthenticationHelper
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 end
