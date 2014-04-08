@@ -56,7 +56,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'launchy'
   gem 'valid_attribute'
-  gem 'shoulda-matchers'
+  gem 'shoulda'
   gem 'quiet_assets'
   gem 'capybara'
 end
