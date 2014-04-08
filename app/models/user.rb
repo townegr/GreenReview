@@ -6,8 +6,4 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
 
-  def age
-    42
-  end
-
 end
