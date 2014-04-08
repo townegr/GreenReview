@@ -14,8 +14,19 @@ feature 'user posts a product', %q{
       visit new_product_path
       fill_in 'Title', with: "Green Product Name"
       fill_in 'Description', with: "Its so green its scary"
+      attach_file 'product_image', Rails.root.join('spec/support/Barcelona-23.jpg')
       click_on "Add Product"
       expect(page).to have_content("Successfully added product")
+    end
+  end
+
+  context 'with invalid attributes' do
+    it 'does not create a valid product' do
+      user = FactoryGirl.create(:user)
+      sign_in_as(user)
+      visit new_product_path
+      click_on "Add Product"
+      expect(page).to have_content("can't be blank")
     end
   end
 end
