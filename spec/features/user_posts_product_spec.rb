@@ -26,7 +26,8 @@ feature 'user posts a product', %q{
       sign_in_as(user)
       visit new_product_path
       click_on "Add Product"
-      expect(page).to have_content("can't be blank")
+      expect(page).to have_content("Titlecan't be blank")
+      expect(page).to have_content("Descriptioncan't be blank")
     end
   end
 end
