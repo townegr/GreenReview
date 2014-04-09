@@ -1,6 +1,7 @@
 <%= simple_form_for [@product, @review] do |f| %>
-    <%= f.input :title, required: false %>
-    <%= f.input :description, required: true %>
-    <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
-    <%= f.submit "Submit Review" %>
+  <%= f.input :title, required: false %>
+  <%= f.input :description, required: true %>
+  <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
+  <%= f.submit "Submit Review" %>
+
 <% end %>
