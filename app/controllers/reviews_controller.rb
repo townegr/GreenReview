@@ -2,11 +2,14 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @review = Review.new
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new
   end
 
   def create
-    @review = Review.new(review_params)
+    @product = Product.find(params[:product_id])
+
+    @review = @product.reviews.new
     if @review.save
       redirect_to @review
       flash[:notice] = 'Review has been added'
@@ -16,6 +19,8 @@ class ReviewsController < ApplicationController
   end
 
   def index
+    @product = SOME QUERY TO GET Product
+    @review = @product.review
   end
 
   def show

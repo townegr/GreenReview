@@ -14,7 +14,7 @@ feature 'authenticated user creates a product review' do
     prev_count = Review.count
 
     sign_in_as(review.user)
-    visit new_review_path
+    visit new_product_review_path
     fill_in 'review_title', with: review.title
     fill_in 'review_description', with: review.description
     select "#{review.product.title}", from: 'Product'
