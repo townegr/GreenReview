@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  mount_uploader :image, ProductImagesUploader
+
   has_many :reviews
   belongs_to :user
 
