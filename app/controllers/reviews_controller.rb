@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to @review
       flash[:notice] = 'Review has been added'
+      ProductReview.review_notification(@review).deliver
     else
       render 'new'
     end
