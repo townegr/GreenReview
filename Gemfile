@@ -27,11 +27,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+
+gem 'foundation-rails'
 gem 'devise'
 
 gem 'carrierwave'
 gem 'fog', "~> 1.3.1"
 gem 'mini_magick'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
