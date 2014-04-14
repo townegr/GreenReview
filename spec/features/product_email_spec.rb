@@ -15,10 +15,9 @@ feature 'User that added product recieves email when another user reviews produc
       review = FactoryGirl.create(:review)
       sign_in_as(review.user)
 
-      visit new_review_path
+      visit new_product_review_path(review.product)
       fill_in 'review_title', with: review.title
       fill_in 'review_description', with: review.description
-      select "#{review.product.title}", from: 'Product'
       click_on 'Submit Review'
 
 
