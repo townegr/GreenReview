@@ -4,10 +4,13 @@ $(function() {
      var stars = starClicked.attr('data-stars');
      var productId = starClicked.attr('data-chapstick-id');
 
-     for(i = 1; i <= stars; i++){
+     for(i = 1; i <= 5; i++){
       star = $('#product_'+ productId + '' + i);
-      star.AddClass('activated');
-     }
-
+      if (i <= stars){
+        star.AddClass('activated');
+      }else{
+        star.removeClass('activated');
+      }
+    }
    });
  });
