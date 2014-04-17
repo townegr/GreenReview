@@ -12,5 +12,17 @@ $(function() {
         star.removeClass('activated');
       }
     }
+
+    $.ajax({
+       type: 'POST',
+       url: '/ratings',
+       data: {
+         rating: {
+           // user_id: can't actually pass this in
+           product_id: productId,
+           stars: stars
+         }
+       }
+     });
    });
  });
