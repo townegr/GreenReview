@@ -3,7 +3,7 @@
   <ul>
 
     <% (1..5).each do |i| %>
-      <li class="rating_star" data-product-id="<%= product.id %>" data-stars="<%= i %>" id="<%="product_#{product.id}_#{i}"%>">star</li>
+      <li class="rating_star" data-product-id="<%= product.id %>" value="<%= i %>" id="<%="product_#{product.id}_#{i}"%>">star</li>
     <% end %>
 
   </ul>
