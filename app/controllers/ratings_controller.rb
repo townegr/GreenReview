@@ -5,7 +5,7 @@ class RatingsController < ApplicationController
       if @rating.save
         format.json { render json: @rating, status: :created }
       else
-        puts "ERROR!"
+        flash[:error] = "Your rating may not have been saved"
       end
     end
   end
@@ -16,7 +16,7 @@ class RatingsController < ApplicationController
       if @rating.update(rating_params)
         format.json { render json: @rating, status: :created }
       else
-        puts "ERROR!"
+        flash[:error] = "Your rating may not have been updated"
       end
     end
   end
