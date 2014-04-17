@@ -4,6 +4,6 @@ GreenReview::Application.routes.draw do
   resources :products do
     resources :reviews
   end
-
+  resources :ratings, only: [:create, :update]
   devise_for :users
 end

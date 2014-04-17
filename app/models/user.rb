@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
 
   has_many :reviews
   has_many :products, dependent: :nullify
+  has_many :ratings, dependent: :destroy
+  has_many :rated_products, through: :ratings, source: :products
 end
