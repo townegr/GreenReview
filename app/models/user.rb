@@ -8,4 +8,9 @@ class User < ActiveRecord::Base
 
   has_many :reviews
   has_many :products, dependent: :nullify
+
+  def after_sign_in_path_for(resource)
+    products_path
+  end
+
 end

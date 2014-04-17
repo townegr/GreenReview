@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @review = @product.reviews.build
   end
 
   def create
@@ -18,6 +19,11 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+  end
+
+  def show
+    @product = Product.find(params[:id])
+    @reviews = @product.reviews
   end
 
   def update
