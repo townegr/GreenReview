@@ -10,25 +10,24 @@ feature 'authenticated user creates a product review' do
 # I must write a description
 
   scenario 'add a valid product review' do
-    review = FactoryGirl.build(:review)
     prev_count = Review.count
-
+    review = FactoryGirl.build(:review)
     sign_in_as(review.user)
-    visit new_review_path
-    fill_in 'review_title', with: review.title
-    fill_in 'review_description', with: review.description
-    select "#{review.product.title}", from: 'Product'
+    visit new_product_review_path(review.product)
+    fill_in 'Title', with: review.title
+    fill_in 'Description', with: review.description
     click_on 'Submit Review'
 
-    expect(Review.count).to eq(prev_count + 1)
+    expect(Review.count).to eql(prev_count + 1)
     expect(page).to have_content(review.description)
   end
 
   scenario 'submit an invalid product review' do
     user = FactoryGirl.create(:user)
+    review = FactoryGirl.build(:review)
     prev_count = Review.count
     sign_in_as(user)
-    visit new_review_path
+    visit new_product_review_path(review.product)
     click_on 'Submit Review'
 
     expect(Review.count).to eq(prev_count)
