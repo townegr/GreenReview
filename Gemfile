@@ -32,7 +32,7 @@ gem 'foundation-rails'
 gem 'devise'
 
 gem 'carrierwave'
-gem 'fog', "~> 1.3.1"
+gem 'fog'
 gem 'mini_magick'
 
 
