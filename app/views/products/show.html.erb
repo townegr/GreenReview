@@ -1,9 +1,9 @@
-<h3> <%= @product.title %> - <%= @product.description %><h3>
-<div><%= image_tag @product.image %></div>
-<div><% @reviews.each do |review| %>
-      <h4><%= review.user.username %> | <%= review.title %></h4>
-      <p><%= review.description %></p>
+<h3> <%= @product.title %> -  <%= @product.description %><h3><br>
+<div><%= image_tag @product.image %></div><br>
+<p><% @reviews.each do |review| %>
+      <strong><%= review.user.username %> | <%= review.title %></strong><br>
+      <%= review.description %><br><br>
      <% end %>
-</div>
+</p>
 
 
