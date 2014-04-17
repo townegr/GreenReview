@@ -2,31 +2,31 @@
 
 <div class="small-4 large-6 columns text-center">
 
-<h1>Product Reviews</h1>
+  <h1>Product Reviews</h1>
 
-<% @products.each do |product| %>
+  <% @products.each do |product| %>
 
-  <div class="row products">
-    <%= image_tag product.image %>
+    <div class="row products">
+      <%= image_tag product.image %>
+    </div>
+
+    <div class="row products">
+      <%= product.title %>
+    </div>
+
+    <div class="row products">
+      <%= product.description %>
+    </div>
+
+    <div class='button radius button-text-color small'>
+      <%= link_to 'View Product Reviews', product_path(product.id) %>
+    </div>
+
+  <% end %>
+
+  <div class='button radius small row'>
+    <%= link_to 'Post a New Product', new_product_path %>
   </div>
-
-  <div class="row products">
-    <%= product.title %>
-  </div>
-
-  <div class="row products">
-    <%= product.description %>
-  </div>
-
-<div class='button radius button-text-color small'>
-  <%= link_to 'View Product Reviews', product_path(product.id) %>
-</div>
-
-<% end %>
-
-<div class='button radius small row'>
-  <%= link_to 'Post a New Product', new_product_path %>
-</div>
 
 </div>
 
