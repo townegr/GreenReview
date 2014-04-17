@@ -34,6 +34,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
+gem 'font-awesome-sass'
 
 
 group :doc do
@@ -55,6 +56,8 @@ end
 gem 'simple_form'
 
 gem 'email_spec'
+
+
 
 group :test do
   gem 'factory_girl_rails'

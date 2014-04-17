@@ -10,13 +10,7 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
  *= require_tree .
+ *= require font-awesome
  */
-.rating_star {
-  display: inline;
-}
 
-.activated {
-  background-color: yellow;
-}
