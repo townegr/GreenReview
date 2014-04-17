@@ -1,3 +1,4 @@
+
   <div class="small-6 large-centered columns text-center">
 
     <h3>Product Reviews</h3><br><br>
@@ -28,3 +29,18 @@
     </div>
 
 </div>
+
+<% @products.each do |product| %>
+
+<%= image_tag product.image %>
+  <ul>
+
+    <% (1..5).each do |i| %>
+      <%= rating(current_user, i, product) %>
+    <% end %>
+
+  </ul>
+
+  <%= image_tag product.image %>
+
+<% end %>

@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @ratings = Rating.where(user: current_user)
   end
 
   def show

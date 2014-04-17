@@ -13,4 +13,7 @@ class User < ActiveRecord::Base
     products_path
   end
 
+  has_many :ratings, dependent: :destroy
+  has_many :rated_products, through: :ratings, source: :products
+
 end
