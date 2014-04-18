@@ -2,6 +2,6 @@
   <%= f.input :title, required: false %>
   <%= f.input :description, required: true %>
   <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
-  <%= f.submit "Submit Review" %>
+  <%= f.button :submit, "Submit Review" %>
 
 <% end %>
