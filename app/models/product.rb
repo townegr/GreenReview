@@ -10,4 +10,12 @@ class Product < ActiveRecord::Base
 
   validates :title, presence: true
   validates :description, presence: true
+
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
 end
