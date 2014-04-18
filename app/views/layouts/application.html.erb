@@ -13,6 +13,12 @@
 
   <body>
     <%= render '/shared/header' %>
+    <ul>
+      <% binding.pry %>
+      <li><% if current_user.is_admin? %></li>
+        <p><%= link_to "Admin Section", 'rails_admin/main#dashboard' %></p>
+      <% end %>
+    </ul>
     <div class="small-6 large-centered columns text-center">
      <%= yield %>
     </div>

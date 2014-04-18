@@ -35,6 +35,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 gem 'font-awesome-sass'
+gem 'rails_admin'
 
 
 group :doc do

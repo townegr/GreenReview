@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   has_many :ratings, dependent: :destroy
   has_many :rated_products, through: :ratings, source: :products
 
+
+  def is_admin?
+    role == 'admin'
+  end
 end
