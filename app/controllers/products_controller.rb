@@ -17,8 +17,9 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    @products = Product.search(params[:search])
     @ratings = Rating.where(user: current_user)
+    render layout: 'index'
   end
 
   def show
