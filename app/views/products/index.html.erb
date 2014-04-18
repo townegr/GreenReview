@@ -1,46 +1,22 @@
-
-  <div class="small-6 large-centered columns text-center">
-
-    <h3>Product Reviews</h3><br><br>
-
-    <% @products.each do |product| %>
-
-      <div class="row products">
-        <%= image_tag product.image %>
-      </div>
-
-      <div class="row products">
-        <%= product.title %> -
-        <%= product.description %>
-      </div>
-
-      <div class='button radius button-text-color tiny'>
-        <%= link_to 'Review this Product', new_product_review_path(product.id) %>
-      </div>
-
-      <div class='button radius button-text-color tiny'>
-        <%= link_to 'View Product Reviews', product_path(product.id) %>
-      </div>
-
-    <% end %> <br><br>
-
-    <div class='button radius tiny row'>
-      <%= link_to 'Post a New Product', new_product_path %>
-    </div>
-
-</div>
+<h3>Product Reviews</h3><br><br>
 
 <% @products.each do |product| %>
 
-<%= image_tag product.image %>
-  <ul>
+  <div class="row products">
+    <%= image_tag product.image %>
+  </div>
 
-    <% (1..5).each do |i| %>
-      <%= rating(current_user, i, product) %>
-    <% end %>
+  <div class="row products">
+    <%= product.title %> -
+    <%= product.description %>
+  </div>
 
-  </ul>
+  <div class='button radius button-text-color tiny'>
+    <%= link_to 'Review this Product', new_product_review_path(product.id) %>
+  </div>
 
-  <%= image_tag product.image %>
+  <div class='button radius button-text-color tiny'>
+    <%= link_to 'View Product Reviews', product_path(product.id) %>
+  </div>
 
-<% end %>
+<% end %> <br>
