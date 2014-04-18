@@ -19,12 +19,14 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @product = SOME QUERY TO GET Product
-    @review = @product.review
+    @product = Product.find(params[:product_id])
+    @reviews = @product.reviews
   end
 
   def show
+    @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
+    redirect_to product_reviews
   end
 
   private
