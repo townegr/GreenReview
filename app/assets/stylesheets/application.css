@@ -13,5 +13,16 @@
  *= require_tree .
  *= require font-awesome
  */
-
+a:link {
+  color: #333333;
+}
+a:visited {
+  color: #FFFFFF;
+}
+a:hover {
+  color: #CCCCCC;
+}
+a:active {
+  color: #333333;
+}
 
