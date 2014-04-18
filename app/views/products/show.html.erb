@@ -1,5 +1,6 @@
 <br><br>
-  <h3> <%= @product.title %> -  <%= @product.description %><h3><br>
+  <h3> <%= @product.title %><h3>
+  <h6><%= @product.description %></h6><br>
   <div><%= image_tag @product.image %></div><br>
   <% @reviews.each do |review| %>
         <p class="text-left"><strong><%= review.user.username %> | <%= review.title %></strong><br>
