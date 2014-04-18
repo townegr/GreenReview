@@ -8,15 +8,13 @@
 
   <div class="row products">
 
+    <h3><%= product.title %></h3>
+    <h6><%= product.description %></h6>
+
     <% (1..5).each do |i| %>
 
       <%= rating(current_user, i, product) %>
     <% end %>
-  </div>
-
-  <div class="row products">
-    <%= product.title %> -
-    <%= product.description %>
   </div>
 
   <div class='button radius button-text-color tiny'>
