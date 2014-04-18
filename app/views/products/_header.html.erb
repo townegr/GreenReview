@@ -4,6 +4,16 @@
       <li class="name">
         <h1><%= link_to 'Green Reviews', products_path %></h1>
       </li>
+      <li class="has-form">
+        <div class="row collapse">
+          <div class="large-8 small-9 columns">
+            <%= text_field_tag :search, params[:search], placeholder: 'Find Products' %>
+          </div>
+          <div class="large-4 small-3 columns">
+             <%= submit_tag "Search", :title => nil, class: 'alert button expand' %>
+          </div>
+        </div>
+      </li>
       <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
     </ul>
   </section>
