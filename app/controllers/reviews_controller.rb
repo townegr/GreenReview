@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = @product.reviews.build(review_params)
     if @review.save
-      redirect_to product_review_path(@product, @review)
+      redirect_to product_path(@product)
       flash[:notice] = 'Review has been added'
       ProductReview.review_notification(@review).deliver
     else

@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!
 
   def new
     @product = Product.new
@@ -18,8 +17,9 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    @products = Product.search(params[:search])
     @ratings = Rating.where(user: current_user)
+    render layout: 'index'
   end
 
   def show
