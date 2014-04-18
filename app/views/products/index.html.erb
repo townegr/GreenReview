@@ -1,33 +1,9 @@
-  <h1>Product Reviews</h1>
+<%= render partial: 'header' %>
 
-  <% @products.each do |product| %>
+<div class="small-6 large-centered columns text-center">
 
-  <div class="row products">
-    <%= image_tag product.image %>
-  </div>
+  <h1>Green Products</h1>
 
-  <div class="row products">
+  <%= render partial: 'products' %>
 
-    <h3><%= product.title %></h3>
-    <h6><%= product.description %></h6>
-
-    <% (1..5).each do |i| %>
-
-      <%= rating(current_user, i, product) %>
-    <% end %>
-  </div>
-
-  <div class='button radius button-text-color tiny'>
-    <%= link_to 'Review this Product', new_product_review_path(product.id) %>
-  </div>
-
-  <div class='button radius button-text-color tiny'>
-    <%= link_to 'View Product Reviews', product_path(product.id) %>
-  </div>
-
-<% end %> <br>
-
-
-
-
-
+</div>
