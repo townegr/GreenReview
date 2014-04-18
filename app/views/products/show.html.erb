@@ -1,1 +1,8 @@
-<%= render "/shared/header" %>
+<div class="small-6 large-centered columns text-center"><br><br>
+  <h3> <%= @product.title %> -  <%= @product.description %><h3><br>
+  <div><%= image_tag @product.image %></div><br>
+  <% @reviews.each do |review| %>
+        <p class="text-left"><strong><%= review.user.username %> | <%= review.title %></strong><br>
+        <%= review.description %><p>
+       <% end %>
+</div>
