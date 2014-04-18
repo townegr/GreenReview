@@ -2,7 +2,7 @@ $(function() {
   $('.star').click( function(e) {
     var starClicked  = $(e.target);
     var numStars     = starClicked.attr('value');
-    var productId  = starClicked.attr('data-product-id');
+    var productId    = starClicked.attr('data-product-id');
     var userRatingId = starClicked.attr('data-user-rating-id');
     var ratingData   = {
       product_id: productId,
