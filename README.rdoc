@@ -9,7 +9,7 @@ Tests written with RSPEC and Capybara
 Run:
 <tt>rspec test/path </tt>
 
-To start the Postgres DB run:
+To start Postgres DB run:
 <tt>rake db:create</tt>
 <tt>rake db:migrate</tt>
 

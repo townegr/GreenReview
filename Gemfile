@@ -58,7 +58,6 @@ gem 'simple_form'
 gem 'email_spec'
 
 
-
 group :test do
   gem 'factory_girl_rails'
 end
