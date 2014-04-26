@@ -5,13 +5,13 @@ Rails 4.0.4
 See Gemfile.lock for dependcies and Gem Versions
 
 Tests written with RSPEC and Capybara
-<tt>gem install rspec<tt>
+<tt>gem install rspec</tt>
 Run:
-<tt>rspec test/path <tt>
+<tt>rspec test/path </tt>
 
 To start the Postgres DB run:
-<tt>rake db:create<tt>
-<tt>rake db:migrate<tt>
+<tt>rake db:create</tt>
+<tt>rake db:migrate</tt>
 
 Photos hosted with CarrierWave and S3
 
